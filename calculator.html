@@ -1,0 +1,32 @@
+<section id="calculator">
+    <h2>Trip Cost Calculator</h2>
+    
+    <input type="text" id="destination" placeholder="Destination"><br><br>
+    <input type="number" id="travellers" placeholder="Travellers"><br><br>
+    <input type="number" id="days" placeholder="Days"><br><br>
+    
+    <select id="style">
+    <option value="1">Budget</option>
+    <option value="1.5">Standard</option>
+    <option value="2">Luxury</option>
+    </select><br><br>
+    
+    <button onclick="calculate()">Calculate</button>
+    
+    <h3 id="result"></h3>
+    </section>
+    <script>
+    function calculate(){
+    let destination=document.getElementById("destination").value;
+    let travellers=parseInt(document.getElementById("travellers").value);
+    let days=parseInt(document.getElementById("days").value);
+    let style=parseFloat(document.getElementById("style").value);
+    
+    let cost=travellers*days*200*style;
+    
+    document.getElementById("result").innerHTML=
+    "Estimated cost for " + travellers + " travellers to " + destination +
+    " for " + days + " days: $" + cost;
+    }
+    
+    </script>
